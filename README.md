@@ -5,6 +5,9 @@
 - Verificar funcionamiento de app MyShutle en micuenta de la nube de Azure.
 - Al presionar en su URL: ej. ́https://mycvdsappname.azurewebsites.net/myshuttledev ́
 - Deberá salir un pantalla mostrando la pantalla de login de MyShuttle. En caso que no, qué eslo más probable, vamos a revisarcómo mirar los errores.
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte1.0.jpeg)
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte1.1.jpeg)
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte1.2.jpeg)
 ## Troubleshooting - Activando logs
 - Revisión de logs delsistema
 - Ingresar al losrecursos de nuestra cuenta en la nube de Azure.
@@ -42,3 +45,33 @@ localmente Git.
 - Actualizar información de conexión a la BD en la clase.
 - Subir loscambios al repositorio remoto.
 - Validarsi ya funciona el ajuste.
+
+# PARTE II. USANDO SPRING DATA DESDE CERO
+- Revisemoslasclases: DataAccess.java y veamosla manera en la que se crearon los métodos: login, employeeFares, getFareTotal.
+- Actualmente el proyecto se conecta a la base de datos usando JDBC (Java Data Base Connection)
+- Crea un nuevo repositorio en tu cuenta de github llamado cvds-7, y sigue lasinstrucciones delsiguiente tutorial de spring.
+   - https://medium.com/@saultobias13/a-quick-start-with-spring-boot-and-spring-data-jpa-32718a8f4706
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.png)
+- Crearemos una base de datoslocal usando Docker:
+- Descargar imagen de MySQL
+```
+   docker pull mysql
+```
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.1.jpeg)
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.2.png)
+- Corrercontenedor de MySQL
+```
+   docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+```
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.3.png)
+- Descargar un cliente de base de datos: DBeaver
+- Crear una tabla de la base de datos: EMPLOYEE.
+- Con lassiguientescolumnas:
+   - EMPLOYEE_ID (VARCHAR)
+   - FIRST_NAME (VARCHAR)
+   - LAST_NAME (VARCHAR)
+   - ROLE (VARCHAR)
+   - SALARY (DOUBLE)
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.4.png)
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.5.png)
+- Buscarcómo conectar nuestro proyecto de spring a una base de datos MySql.
