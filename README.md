@@ -75,3 +75,4 @@ localmente Git.
 ![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.4.png)
 ![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.5.png)
 - Buscarcómo conectar nuestro proyecto de spring a una base de datos MySql.
+![](https://github.com/Juc28/cvds-7/blob/master/pantallazos/parte2.6.png)
